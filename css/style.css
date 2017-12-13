@@ -1,10 +1,10 @@
 body {
-    background-color: #cccccc;
+    background-color:#232B2B	;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 {
-    color: white;
+    color: #DC3D24;
     size: 24pt;
     text-align: center;
 }
@@ -12,10 +12,11 @@ h1 {
 .container {
     display: grid;
     grid-gap: 15px; 
+    height: auto;
     margin-left: 5%;
     margin-right: 5%;   
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 50px 350px 50px;
+    grid-template-rows: minmax(50px, auto) minmax(50px, auto) minmax(50px, auto);
     grid-template-areas:
         "h h h h h h h h h h h h"
         "b b b b b b b b b b b b"
@@ -25,35 +26,59 @@ h1 {
 .header {
     grid-area: h;    
     width: auto;
-    height: 100px;
-    padding: 20px;
-    background-color: #e5e5e5;
+    padding: 50px;
 }
 
 .animal-buttons {
     grid-area: b;
     background-color: #e5e5e5;
-    margin-top: 100px;
-    
+    padding: 20px;
+    text-align: center;
+
 }
 
 .image-display {
     grid-area: d;
     background-color: #e5e5e5;
-    
+    padding: 20px;
 }
 
 .search-form {
     grid-area: s;
     background-color: #e5e5e5;
-    
+    padding: 20px;
+    text-align: center;
+}
+
+.button {
+    width: auto;
+    padding: 20px;
+    background-color: #DC3D24;
+    color: white;
+    font-size: 14pt; 
+}
+
+.submit-button {
+        width: auto;
+        padding: 10px;
+        background-color: #DC3D24;
+        color: white;
+        font-size: 14pt; 
+        margin: 10px;
+}
+
+.animal-input {
+    width: 75%;
+    height: 25px;
+    margin: 10px;
 }
 
 @media screen and (max-width: 640px) {
     .container {
         grid-template-areas:
             "h h h h h h h h h h h h"
-            "b b b b b b b b s s s s"
-            "d d d d d d d d d d d d";
+            "b b b b b b b b b b b b"
+            "d d d d d d d d d d d d"
+            "s s s s s s s s s s s s";
     }
 }
