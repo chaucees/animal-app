@@ -1,5 +1,5 @@
 // Create Topics Variable
-var topics = ["koala", "giraffe", "tasmanian devil", "cheetag", "kangaroo", "wombat", "elephant", "platypus"]
+var topics = ["koala", "giraffe", "tasmanian devil", "cheetah", "kangaroo", "wombat", "elephant", "platypus"]
 
 // Display Buttons
 function renderButtons() {
@@ -12,8 +12,10 @@ function renderButtons() {
         $(".animal-buttons").append(a);
     }
 }
+$( document ).ready(function() {
+    renderButtons();
+});
 
-renderButtons();
 
 // Function to display memes when button is clicked
 $(document).on('click', '.button', function() {
